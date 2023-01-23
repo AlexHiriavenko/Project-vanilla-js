@@ -7,16 +7,30 @@ body {
     font-family:                'Montserrat';
 }
 
-.up {
-    display:                    block;
-    position:                   fixed;
-    top:                        75%;
-    left:                       95%;
-    opacity:                    0.3;
+.container {
+    width:                      116rem;
+    margin:                     0 auto;
+    /* border:                     1px solid red; */
 }
 
-.up > img {
-    width:                      50%;
+.section-title {
+    font-size:                  36px;
+    color:                      #4E4E4E;
+    text-align:                 center;
+    position:                   relative;
+}
+
+.section-title::after {
+    content:                    "";
+    position:                   absolute;
+    border-bottom:              1.4px solid #18CFAB;
+    border-top:                 1.4px solid #18CFAB;
+    transform:                  skewX(65deg);
+    width:                      7.7rem;
+    height:                     0.5rem;
+    top:                        100%;
+    left:                       47%; 
+    margin-top:                 2.6rem;   
 }
 
 /* //////////////////// header nav //////////////////// */
@@ -27,12 +41,6 @@ header {
     background-size:            100% 100%;
     background-position:        center center;
     background-attachment:      fixed;
-}
-
-.container {
-    width:                      116rem;
-    margin:                     0 auto;
-    border:                     1px solid red;
 }
 
 .header-nav {
@@ -212,34 +220,11 @@ header .call-to-action {
     text-align:                 center;
 }
 
-/* //////////////////// services section //////////////////// */
+/* //////////////////// services navigation //////////////////// */
 
 .services {
     padding:                    9rem 0;
 }
-
-.section-title {
-    font-size:                  36px;
-    color:                      #4E4E4E;
-    text-align:                 center;
-    position:                   relative;
-}
-
-.section-title::after {
-    content:                    "";
-    position:                   absolute;
-    border-bottom:              1.4px solid #18CFAB;
-    border-top:                 1.4px solid #18CFAB;
-    transform:                  skewX(65deg);
-    width:                      7.7rem;
-    height:                     0.5rem;
-    top:                        100%;
-    left:                       47%; 
-    margin-top:                 2.6rem;   
-}
-
-
-/* //////////////////// services navigation//////////////////// */
 
 .services-list {
     display:                    flex;
@@ -287,7 +272,11 @@ header .call-to-action {
 .services-description {
     display:                    flex;
     width:                      100%;
-    min-height:                 14rem;
+    min-height:                 14.3rem;
+}
+
+.services-description span {
+    font-weight:                600;
 }
 
 .services-img {
@@ -303,7 +292,7 @@ header .call-to-action {
     padding-left:               1rem;
 }
 
-.services-description.inactive {
+.services .inactive {
     display:                    none;
 }
 
@@ -344,7 +333,6 @@ header .call-to-action {
     margin:                     8.5rem 0 6.5rem;
     display:                    flex;
     justify-content:            center;
-
 }
 
 .work-list-item {
@@ -362,6 +350,11 @@ header .call-to-action {
     color:                      #18CFAB;
 }
 
+.work-list-item.active {
+    border:                     1.4px solid #18CFAB;
+    color:                      #18CFAB;
+}
+
 /* //////////////////// work gallery //////////////////// */
 
 .section-gallery {
@@ -371,7 +364,7 @@ header .call-to-action {
     margin-bottom:              7rem;
 }
 
-.work .section-gallery>li>img {
+.work .gallery-img {
     width:                      100%;
     height:                     100%;
     max-height:                 21.2rem;
@@ -439,7 +432,7 @@ header .call-to-action {
     margin-bottom:              2.4rem;
 }
 
-.gallery-item:hover .hidden-options {
+.work .gallery-item:hover .hidden-options {
     transition:                 .5s;
     top:                        0;
     cursor:                     pointer;
@@ -553,9 +546,33 @@ header .call-to-action {
     margin:                     10rem auto 3.7rem;
 }
 
-.user-feedback {
+/* //////////////////// feedback div changer //////////////////// */
+
+.feedback .user-feedback {
     text-align:                 center;
+    margin-bottom:              5rem;
+    min-height:                 39rem;
 }
+
+.feedback .div-changer {
+    position:                   relative;
+    overflow:                   hidden;
+    min-height:                 39rem;
+}
+
+.inactive {
+    position:                   absolute;
+    top:                        0%;
+    left:                       100%;
+    max-height:                 25%;
+    overflow:                   hidden;
+}
+
+.div-changer:hover .inactive {
+    left:                       0;
+    transition:                 .5s;
+}
+
 
 .feedback-text {
     font-size:                  1.6rem;
@@ -578,4 +595,115 @@ header .call-to-action {
     line-height:                2;
     color:                      #BBBBBB;
     margin-bottom:              2.5rem;
+}
+
+.feedback .user-avatar {
+    border-radius:              50%;
+    outline:                    12px solid rgba(31, 218, 181, 0.2) ;
+    margin-bottom:              5rem;
+}
+
+/* //////////////////// feedback avatar carousel //////////////////// */
+
+.feedback .users-carousel {
+    display:                    flex;
+    justify-content:            center;
+    align-items:                center;
+    gap:                        5.5rem;
+}
+
+.feedback .users-list {
+    display:                    flex;
+    gap:                        2.5rem;
+}
+
+.feedback .user-img {
+    border-radius:              50%;
+    outline:                    5px solid rgba(31, 218, 181, 0.3);
+}
+
+.users-list-item:hover .user-img {
+    outline:                    5px solid rgba(11, 229, 19, 0.4);
+}
+
+.feedback .user-img.active {
+    position:                   relative;
+    outline:                    5px solid rgba(11, 229, 19, 0.4);
+    bottom:                     1rem;
+}
+
+.users-list-item.active {
+    position:                   relative;
+    bottom:                     1rem;
+}
+
+.btn-carousel {
+   width:                       31px;
+   height:                      31px;
+   border:                      1px solid #BBBBBB;
+   position:                    relative;
+   background:                  none;
+   transition-duration:         0.5s;
+}
+
+.btn-carousel::after {
+   content:                     '';
+   position:                    absolute;
+   bottom:                      9px;
+   left:                        11px;
+   width:                       10px;
+   height:                      10px;
+   border-right:                2px solid #BBBBBB;
+   border-top:                  2px solid #BBBBBB;
+   transition-duration:         0.5s;
+}
+
+.btn-carousel.arrow-left::after {
+   left:                        11px;
+   transform:                   rotate(225deg);
+}
+
+.btn-carousel.arrow-right::after {
+   left:                        7px;
+   transform:                   rotate(45deg);
+}
+
+.btn-carousel:hover {
+   background:                  #18CFAB;
+   border:                      1px solid #18CFAB;
+}
+
+.btn-carousel:hover::after {
+   border-right:                2px solid #FFFFFF;
+   border-top:                  2px solid #FFFFFF;
+   transition-duration:         0.5s;
+}
+
+/* //////////////////// feedback avatar carousel //////////////////// */
+
+footer {
+    padding:                    4.7rem 0;
+    background-color:           #22353F;
+    text-align:                 center;
+}
+
+footer p {
+    font-size:                  1.4rem;
+    color:                      #AEAEAE
+}
+
+footer p span {
+    color:                      #18CFAB;
+}
+
+.up {
+    display:                    block;
+    position:                   fixed;
+    top:                        75%;
+    left:                       95%;
+    opacity:                    0.3;
+}
+
+.up > img {
+    width:                      50%;
 }

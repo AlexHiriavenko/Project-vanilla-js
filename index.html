@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./styles.css/main.css">
 </head>
 <body>
-    <a class="up" href="#header"><img src="./img/header/up.svg" alt="up"></a>
     <header id="header">
         <nav>
             <div class="container header-nav">
@@ -30,7 +29,7 @@
                     <li class="nav-list-item"><a href="#">WORK</a></li>
                     <li class="nav-list-item"><a href="#">TESTIMONIAL</a></li>
                 </ul>
-                <img class="nav-search-icon" src="./img/header/search-icon.png" alt="">
+                <img class="nav-search-icon" src="./img/header/search-icon.png" alt="search-icon">
             </div>
         </nav>
         <div class="container header-content">
@@ -41,7 +40,7 @@
             <a class="cta-btns" href="">PURCHASE NOW</a>
         </div>
     </header>
-    <section class="benefits">
+    <div class="benefits">
         <ul class="benefits-list">
             <li class="benefits-list-item">
                 <a href="#">
@@ -68,22 +67,22 @@
                 </a>
             </li>
         </ul>
-    </section>
+    </div>
     <section class="services">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
             <ul class="services-list">
-                <li class="services-list-item active">Web Design</li>
-                <li class="services-list-item">Graphic Design</li>
-                <li class="services-list-item">Online Support</li>
-                <li class="services-list-item">App Design</li>
-                <li class="services-list-item">Online Marketing</li>
-                <li class="services-list-item">Seo Service</li>
+                <li class="services-list-item active" data-service="wd">Web Design</li>
+                <li class="services-list-item" data-service="gd">Graphic Design</li>
+                <li class="services-list-item" data-service="os">Online Support</li>
+                <li class="services-list-item" data-service="app">App Design</li>
+                <li class="services-list-item" data-service="om">Online Marketing</li>
+                <li class="services-list-item" data-service="seo">Seo Service</li>
             </ul>
-            <div class="services-description active">
+            <div class="services-description active" data-service="wd">
                 <img class="services-img" src="./img/services/Web-Design.jpg" alt="photo" width="194" height="139">
-                <p class="description-text">
-                    Web Design, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                <p class="description-text" lang="zxx">
+                    <span>Web Design</span>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -92,19 +91,19 @@
                     deserunt mollit anim id est laborum.
                 </p>
             </div>
-            <div class="services-description inactive">
+            <div class="services-description inactive" data-service="gd">
                 <img class="services-img" src="./img/img-base/graphic-design/graphic-design3.jpg" alt="photo" width="194" height="139">
-                <p class="description-text">
-                    Graphic Design, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                <p class="description-text" lang="zxx">
+                    <span>Graphic Design</span>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                 </p>
             </div>
-            <div class="services-description inactive">
+            <div class="services-description inactive" data-service="os">
                 <img class="services-img" src="./img/services/support.jpeg" alt="photo" width="194" height="139">
-                <p class="description-text">
-                    Online Support, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                <p class="description-text" lang="zxx">
+                    <span>Online Support</span>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -112,17 +111,17 @@
                     incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <div class="services-description inactive">
-                <img class="services-img" src="./img/img-base/landing page/landing-page7.jpg" alt="photo" width="194" height="139">
-                <p class="description-text">
-                    App Design, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            <div class="services-description inactive" data-service="app">
+                <img class="services-img" src="./img/img-base/landing-page/landing-page7.jpg" alt="photo" width="194" height="139">
+                <p class="description-text" lang="zxx">
+                    <span>App Design</span>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </div>
-            <div class="services-description inactive">
+            <div class="services-description inactive" data-service="om">
                 <img class="services-img" src="./img/services/marketing.jpg" alt="photo" width="194" height="139">
-                <p class="description-text">
-                    Online Marketing, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                <p class="description-text" lang="zxx">
+                    <span>Online Marketing</span>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -131,10 +130,10 @@
                     deserunt mollit anim id est laborum.
                 </p>
             </div>
-            <div class="services-description inactive">
+            <div class="services-description inactive" data-service="seo">
                 <img class="services-img" src="./img/services/seo_page.png" alt="photo" width="194" height="139">
-                <p class="description-text">
-                    Seo Service, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                <p class="description-text" lang="zxx">
+                    <span>Seo Service</span>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -155,140 +154,143 @@
         <div class="container">
             <h2 class="section-title">Our Amazing Work</h2>
             <ul class="work-list">
-                <li class="work-list-item">All</li>
-                <li class="work-list-item graph-des">Graphic Design</li>
-                <li class="work-list-item web-des">Web Design</li>
-                <li class="work-list-item landing">Landing Pages</li>
-                <li class="work-list-item wp">Wordpress</li>
+                <li class="work-list-item active" data-type-work="all">All</li>
+                <li class="work-list-item" data-type-work="gd">Graphic Design</li>
+                <li class="work-list-item" data-type-work="wd">Web Design</li>
+                <li class="work-list-item" data-type-work="lp">Landing Pages</li>
+                <li class="work-list-item" data-type-work="wp">Wordpress</li>
             </ul>
             <ul class="section-gallery">
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/graphic-design/graphic-design1.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/graphic-design/graphic-design4.jpg" alt="graphic-design"
+                        data-type-Work="gd">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/graphic-design/graphic-design2.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/web-design/web-design4.jpg" alt="web-design" data-type-Work="wd">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/graphic-design/graphic-design4.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/landing-page/landing-page5.jpg" alt="landing page" data-type-Work="lp">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/web design/web-design1.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/wordpress/wordpress9.jpg" alt="wordpress" data-type-Work="wp">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/web design/web-design4.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/graphic-design/graphic-design8.jpg" alt="graphic-design"
+                        data-type-Work="gd">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/web design/web-design6.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/web-design/web-design1.jpg" alt="web-design" data-type-Work="wd">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/landing page/landing-page5.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/landing-page/landing-page3.jpg" alt="landing page" data-type-Work="lp">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/landing page/landing-page3.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/wordpress/wordpress10.jpg" alt="wordpress" data-type-Work="wp">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/landing page/landing-page4.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/graphic-design/graphic-design2.jpg" alt="graphic-design"
+                        data-type-Work="gd">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/wordpress/wordpress10.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/web-design/web-design6.jpg" alt="web-design" data-type-Work="wd">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/wordpress/wordpress5.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/landing-page/landing-page1.jpg" alt="landing page" data-type-Work="lp">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
                     </div>
                 </li>
                 <li class="gallery-item">
-                    <img class="graph-des" src="./img/img-base/wordpress/wordpress8.jpg" alt="">
+                    <img class="gallery-img" src="./img/img-base/wordpress/wordpress8.jpg" alt="wordpress" data-type-Work="wp">
                     <div class="hidden-options">
                         <div>
-                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt=""></div>
-                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt=""></div>
+                            <div class="circle"><img class="chain" src="./img/work/chain.png" alt="chain"></div>
+                            <div class="circle"><img class="quater" src="./img/work/quater.png" alt="quater"></div>
                         </div>
                         <p class="cd-text">CREATIVE DESIGN</p>
                         <p class="wd-text">Web Design</p>
@@ -304,66 +306,66 @@
             <ul class="news-list section-gallery">
                 <li class="news-list-item">
                     <a href="#">
-                        <img src="./img/breaking-news/photorapher.png" alt="" width="263" height="208">
+                        <img src="./img/breaking-news/photorapher.png" alt="photorapher" width="263" height="208">
                         <p class="date">12<br>Feb</p>
                         <h3 class="blog-title">Amazing Blog Post</h3>
-                        <p><pre class="comment">By admin    |    2 comment</pre></p>
+                        <pre class="comment">By admin    |    2 comment</pre>
                     </a>
                 </li>
                 <li class="news-list-item">
                     <a href="#">
-                        <img src="./img/breaking-news/fire.png" alt="" width="263" height="208">
+                        <img src="./img/breaking-news/fire.png" alt="fire" width="263" height="208">
                         <p class="date">12<br>Feb</p>
                         <h3 class="blog-title">Amazing Blog Post</h3>
-                        <p><pre class="comment">By admin    |    2 comment</pre></p>
+                        <pre class="comment">By admin    |    2 comment</pre>
                     </a>
                 </li>
                 <li class="news-list-item">
                     <a href="#">
-                        <img src="./img/breaking-news/cyclist.png" alt="" width="263" height="208">
+                        <img src="./img/breaking-news/cyclist.png" alt="cyclist" width="263" height="208">
                         <p class="date">12<br>Feb</p>
                         <h3 class="blog-title">Amazing Blog Post</h3>
-                        <p><pre class="comment">By admin    |    2 comment</pre></p>
+                        <pre class="comment">By admin    |    2 comment</pre>
                     </a>
                 </li>
                 <li class="news-list-item">
                     <a href="#">
-                        <img src="./img/breaking-news/man-tablet.png" alt="" width="263" height="208">
+                        <img src="./img/breaking-news/man-tablet.png" alt="man and tablet" width="263" height="208">
                         <p class="date">12<br>Feb</p>
                         <h3 class="blog-title">Amazing Blog Post</h3>
-                        <p><pre class="comment">By admin    |    2 comment</pre></p>
+                        <pre class="comment">By admin    |    2 comment</pre>
                     </a>
                 </li>
                 <li class="news-list-item">
                     <a href="#">
-                        <img src="./img/breaking-news/pelicans.png" alt="" width="263" height="208">
+                        <img src="./img/breaking-news/pelicans.png" alt="pelicans" width="263" height="208">
                         <p class="date">12<br>Feb</p>
                         <h3 class="blog-title">Amazing Blog Post</h3>
-                        <p><pre class="comment">By admin    |    2 comment</pre></p>
+                        <pre class="comment">By admin    |    2 comment</pre>
                     </a>
                 </li>
                 <li class="news-list-item">
                     <a href="#">
-                        <img src="./img/breaking-news/cyclist-forest.png" alt="" width="263" height="208">
+                        <img src="./img/breaking-news/cyclist-forest.png" alt="cyclist in forest" width="263" height="208">
                         <p class="date">12<br>Feb</p>
                         <h3 class="blog-title">Amazing Blog Post</h3>
-                        <p><pre class="comment">By admin    |    2 comment</pre></p>
+                        <pre class="comment">By admin    |    2 comment</pre>
                     </a>
                 </li>
                 <li class="news-list-item">
                     <a href="#">
-                        <img src="./img/breaking-news/waterfall.png" alt="" width="263" height="208">
+                        <img src="./img/breaking-news/waterfall.png" alt="waterfall" width="263" height="208">
                         <p class="date">12<br>Feb</p>
                         <h3 class="blog-title">Amazing Blog Post</h3>
-                        <p><pre class="comment">By admin    |    2 comment</pre></p>
+                        <pre class="comment">By admin    |    2 comment</pre>
                     </a>
                 </li>
                 <li class="news-list-item">
                     <a href="#">
-                        <img src="./img/breaking-news/notates.png" alt="" width="263" height="208">
+                        <img src="./img/breaking-news/notates.png" alt="notates" width="263" height="208">
                         <p class="date">12<br>Feb</p>
                         <h3 class="blog-title">Amazing Blog Post</h3>
-                        <p><pre class="comment">By admin    |    2 comment</pre></p>
+                        <pre class="comment">By admin    |    2 comment</pre>
                     </a>
                 </li>
             </ul>
@@ -372,19 +374,64 @@
     <section class="feedback">
         <div class="container">
             <h2 class="section-title">What People Say About the Ham</h2>
-            <img class="quotes" src="./img/client-feedback/quotes.png" alt="">
-            <div class="user-feedback">
-                <p class="feedback-text">
-                    Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar
-                    odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi
-                    pulvinar odio eget aliquam facilisis.
-                </p>
-                <h3 class="user-name">HASAN ALI</h3>
-                <p class="user-speciality">UX Designer</p>
-                <img src="./img/client-feedback/hasan-ali.png" alt="">
+            <img class="quotes" src="./img/client-feedback/quotes.png" alt="quotes">
+            <div class="div-changer">
+                <div class="user-feedback active">
+                    <p class="feedback-text" lang="zxx">
+                        Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar
+                        odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi
+                        pulvinar odio eget aliquam facilisis.
+                    </p>
+                    <h3 class="user-name">HASAN ALI</h3>
+                    <p class="user-speciality">UX Designer</p>
+                    <img class="user-avatar" src="./img/client-feedback/hasan-ali.png" alt="user avatar" width="143" height="142">
+                </div>
+                <div class="user-feedback inactive">
+                    <p class="feedback-text" lang="zxx">
+                        Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi
+                        pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
+                        Morbi pulvinar odio eget aliquam facilisis. Morbi pulvinar odio eget aliquam facilisis.
+                    </p>
+                    <h3 class="user-name">Homer Simpson</h3>
+                    <p class="user-speciality">Nuclear Engineer</p>
+                    <img class="user-avatar" src="./img/client-feedback/gomer.jpg" alt="user avatar" width="143" height="142">
+                </div>
+                <div class="user-feedback inactive">
+                    <p class="feedback-text" lang="zxx">
+                        Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi
+                        pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
+                        Morbi pulvinar odio eget aliquam facilisis.
+                    </p>
+                    <h3 class="user-name">John Frink</h3>
+                    <p class="user-speciality">Scientific Researcher</p>
+                    <img class="user-avatar" src="./img/client-feedback/Frink.webp" alt="user avatar" width="143" height="142">
+                </div>
+                <div class="user-feedback inactive">
+                    <p class="feedback-text" lang="zxx">
+                        Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi
+                        pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
+                    </p>
+                    <h3 class="user-name">Apu Nahasapeemapetilon</h3>
+                    <p class="user-speciality">Web Developer</p>
+                    <img class="user-avatar" src="./img/client-feedback/apu.png" alt="user avatar" width="143" height="142">
+                </div>
+            </div>
+            <div class="users-carousel">
+                <button class="btn-carousel arrow-left"></button>
+                <ul class="users-list">
+                    <li class="users-list-item"><img class="user-img active" src="./img/client-feedback/hasan-ali.png" alt="user photo" width="60" height="60"></li>
+                    <li class="users-list-item"><img class="user-img" src="./img/client-feedback/gomer.jpg" alt="user photo" width="60" height="60"></li>
+                    <li class="users-list-item"><img class="user-img" src="./img/client-feedback/Frink.webp" alt="user photo" width="60" height="60"></li>
+                    <li class="users-list-item"><img class="user-img" src="./img/client-feedback/apu.png" alt="user photo" width="60" height="60"></li>
+                </ul>
+                <button class="btn-carousel arrow-right"></button>
             </div>
         </div>
     </section>
+    <footer>
+       <p>© Copyright 2015 <span>theHam</span> | All Rights Reserved</p>
+       <a class="up" href="#header"><img src="./img/header/up.svg" alt="up"></a>
+    </footer>
     <script src="./js/main.js"></script>
 </body>
 </html>
