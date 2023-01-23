@@ -345,12 +345,12 @@ header .call-to-action {
     cursor:                     pointer;
 }
 
-.work-list-item:hover {
+li.work-list-item.active {
     border:                     1.4px solid #18CFAB;
     color:                      #18CFAB;
 }
 
-.work-list-item.active {
+.work-list-item:hover {
     border:                     1.4px solid #18CFAB;
     color:                      #18CFAB;
 }
