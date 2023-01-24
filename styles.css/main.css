@@ -36,7 +36,7 @@ body {
 /* //////////////////// header nav //////////////////// */
 
 header {
-    background-image:           url("../img/img-base/sections-background/section-1\(header\).jpg");
+    background-image:           url("../img/img-base/sections-background/header.jpg");
     margin-bottom:              .8rem;
     background-size:            100% 100%;
     background-position:        center center;
@@ -303,7 +303,9 @@ header .call-to-action {
     text-align:                 center;
     background-image:           linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ),
                                 url("../img/img-base/sections-background/section-2.jpg");
-    background-position:        center;
+    background-repeat:          no-repeat;
+    background-size:            cover;
+    background-position-y:      center;
 }
 
 .purchase .title-text {
@@ -328,7 +330,6 @@ header .call-to-action {
     background-color:           #E9EDEF;
 }
 
-
 .work-list {
     margin:                     8.5rem 0 6.5rem;
     display:                    flex;
@@ -351,17 +352,23 @@ li.work-list-item.active {
 }
 
 .work-list-item:hover {
-    border:                     1.4px solid #18CFAB;
+    border:                     1.4px solid #67adfe;
     color:                      #18CFAB;
 }
 
 /* //////////////////// work gallery //////////////////// */
 
-.section-gallery {
+.works-gallery {
     display:                    grid;
     width:                      100%;
     grid-template-columns:      repeat(4, 1fr);
     margin-bottom:              7rem;
+    justify-content:            center;
+}
+
+.works-gallery-js {
+    display:                    flex;
+    gap:                        1rem;
 }
 
 .work .gallery-img {
@@ -470,7 +477,11 @@ li.work-list-item.active {
 }
 
 .news-list {
-    margin-top:                 10rem;
+    display:                    grid;
+    width:                      100%;
+    grid-template-columns:      repeat(4, 1fr);
+    justify-content:            center;
+    margin:                     10rem 0 7rem;
     gap:                        3rem;
 }
 
@@ -557,14 +568,15 @@ li.work-list-item.active {
 .feedback .div-changer {
     position:                   relative;
     overflow:                   hidden;
-    min-height:                 39rem;
+    min-height:                 4.4rem;
+    border:                     1px solid red;
 }
 
 .inactive {
     position:                   absolute;
     top:                        0%;
     left:                       100%;
-    max-height:                 25%;
+    max-height:                 4.4rem;
     overflow:                   hidden;
 }
 
@@ -679,7 +691,7 @@ li.work-list-item.active {
    transition-duration:         0.5s;
 }
 
-/* //////////////////// feedback avatar carousel //////////////////// */
+/* //////////////////// footer //////////////////// */
 
 footer {
     padding:                    4.7rem 0;
