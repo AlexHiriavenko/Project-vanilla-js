@@ -1,4 +1,4 @@
-// add pop-up to work section for every teg "li";
+// ADD POP-UP TO WORK SECTION FOR EVERY TEG "LI";
 // чтобы не дублировать в разметке 12раз один и тот-же pop-up для каждого li  
 //перенес его в js, одна и та же разметка вставляется для каждого li.
 window.addEventListener("DOMContentLoaded", addTegs);
@@ -11,7 +11,7 @@ function addTegs() {
 
 
 
-// hover searh-icon - замена иконки ув стекла по наведению (хедер навбар)
+// HOVER SEARCH ICON - замена иконки ув стекла по наведению (хедер навбар)
 const searchIcon = document.querySelector(".nav-search-icon");
 searchIcon.addEventListener("mouseover", ()=> {
     searchIcon.setAttribute("src" , "./img/header/search-icon-hover.png");
@@ -23,7 +23,7 @@ searchIcon.addEventListener("mouseout", ()=> {
 
 
 
-// switching tabs of the services section
+// SWITCHING TABS OF THE SERVICES SECTION
 const servicesList = document.querySelector(".services-list");
 const servicesDescriptions = document.querySelectorAll(".services-description");
 
@@ -48,7 +48,7 @@ let countDisplayBlock = 12;       // это переменная - счетчи�
 // то после фильтра я убираю эту подсветку т.к. не имеет смысла что то подсвечивать 
 // 2) для выравнивания grid repeat (4, fr) или (3, fr);
 
-// filter images visibility by click (on section works)
+// FILTER IMAGES VISIBILITY BY CLICK (ON SECTION WORKS)
 const workList = document.querySelector(".work-list");
 workList.addEventListener("click", (evt) => {
     const galleryItems = document.querySelectorAll(".work .gallery-item");
@@ -66,8 +66,7 @@ workList.addEventListener("click", (evt) => {
             if (target.dataset.typeWork === "all") li.style.display = "block"  // конец кода фильтр изображений по категориям
             arr.push(window.getComputedStyle(li).display);
         }    
-        let displayBlockFilter = arr.filter(display => display.includes("block"));
-        countDisplayBlock = displayBlockFilter.length;              // конец кода опредение кол-ва пунктов списка с дисплей блок   
+        countDisplayBlock = arr.filter(display => display.includes("block")).length; // конец кода кол-во li с дисплей блок   
     }                                                        
     if (countDisplayBlock <= 3 || countDisplayBlock % 4 !== 0) {    // если см.условие 
         worksGallery.classList.add("works-gallery-js");             // то меняем дисплей грид с (4, 1fr) на (3, 1fr), для более опимального отображения. 
@@ -83,14 +82,13 @@ workList.addEventListener("click", (evt) => {
 // по наведению на категорию - картинки других категорий получают затемнение.
 workList.addEventListener("mouseover", (evt) => {
     const galleryImgs = document.querySelectorAll(".work .gallery-img")
-    if (countDisplayBlock >= 12) {
     let target = evt.target;
-    if (target.tagName === "LI" && target.dataset.typeWork !== "all") {
-        let data = target.dataset.typeWork
+    if (countDisplayBlock >= 12 && target.tagName === "LI" && target.dataset.typeWork !== "all") {
         for (img of galleryImgs) {
-            if (img.dataset.typeWork !== data) img.style.filter = "brightness(25%)";
+            if (img.dataset.typeWork !== target.dataset.typeWork) 
+            img.style.filter = "brightness(25%)";
         }
-    }}
+    }
 })
 workList.addEventListener("mouseout", (evt) => {
     const galleryImgs = document.querySelectorAll(".work .gallery-img")
@@ -102,7 +100,7 @@ workList.addEventListener("mouseout", (evt) => {
 
 
 
-// load images by click on button;
+// LOAD IMAGES BY CLICK ON BUTTON;
 const focusLink = document.querySelector(".hidden-link")                        // для будущей имитации клика по которому перейдем на якорь
 const btnLoad = document.querySelector(".work .load-btn");                      // находим кнопку
 btnLoad.addEventListener("click", loadImgs)                                     // слушатель по клику на кнопку    
@@ -120,8 +118,7 @@ function loadImgs() {
         let factor = quantLi <= 12 ? 0 : 3                                  // коэфициент, чтобы добавить картинки 1й раз одни а 2й раз другие
             for (let i = 1; i <= 12; i += 1) {                              // клонируем li           
                 let li = worksGallery.children[i-1].cloneNode(true);
-                let img = li.children[0];  
-                worksGallery.append(li);                               
+                let img = li.children[0];                                 
 
                 if (i <= 3) {                                                              // настраиваем категории и ссылки на картинки
                     li.setAttribute("data-type-Work", "gd");
@@ -140,6 +137,7 @@ function loadImgs() {
                     img.setAttribute("src", `./img/img-base/wp/wp-${i - 9 + factor}.jpg`)  // картинки с 1й по 3ю или с 4й по 6ю из папки wp
                     img.setAttribute("data-type-Work", "wp");
                 }
+                worksGallery.append(li);
             }
         }
         if (quantLi >= 24) {                                                     // если произошло 2 загрузки       
@@ -154,3 +152,6 @@ function loadImgs() {
         }
     }, 2000);
 }
+
+
+
