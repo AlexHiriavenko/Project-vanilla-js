@@ -347,7 +347,7 @@ li.work-list-item.active {
 }
 
 .work-list-item:hover {
-    border:                     1.4px solid #67adfe;
+    border:                     1.4px solid white;
     color:                      #18CFAB;
 }
 
@@ -382,7 +382,7 @@ li.work-list-item.active {
     overflow:                   hidden;     
 }
 
-.work .hidden-options {
+.work .pop-up {
     display:                    flex;
     flex-direction:             column;
     justify-content:            center;
@@ -437,7 +437,7 @@ li.work-list-item.active {
     margin-bottom:              2.4rem;
 }
 
-.work .gallery-item:hover .hidden-options {
+.work .gallery-item:hover .pop-up {
     transition:                 .5s;
     top:                        0;
     cursor:                     pointer;
@@ -456,12 +456,21 @@ li.work-list-item.active {
     width:                      16.8rem;
     height:                     6.3rem;
     border-radius:              5px;
-    background-image:           url("../img/work/plus.png");
-    background-repeat:          no-repeat;
-    background-position:        13% 49%;
     padding-left:               2%;
     transition-duration:        .5s;
     position:                   relative;
+}
+
+.bg-btn-add {
+    background-image:           url("../img/work/plus.png");
+    background-repeat:          no-repeat;
+    background-position:        13% 49%;
+}
+
+.bg-btn-min {
+    background-image:           url("../img/work/sub.png");
+    background-repeat:          no-repeat;
+    background-position:        13% 49%;
 }
 
 .load-btn:hover {
