@@ -187,6 +187,12 @@ header .call-to-action {
 }
 
 .benefits-list-item {
+    display:                    flex;
+    flex-wrap:                  wrap;
+    flex-direction:             column;
+    justify-content:            space-between;
+    align-items:                center;
+    padding:                    6rem 0 7rem;
     min-height:                 26rem;
     width:                      25%;
     min-width:                  20rem;
@@ -202,17 +208,6 @@ header .call-to-action {
 .benefits-list-item:nth-child(2n) {
     background-color:           #18CFAB;
     color:                      #ffffff;
-}
-
-.benefits-list-item a {
-    width:                      100%;
-    height:                     100%;
-    display:                    flex;
-    flex-wrap:                  wrap;
-    flex-direction:             column;
-    justify-content:            space-between;
-    align-items:                center;
-    padding:                    6rem 0 7rem;
 }
 
 .benefits .list-item-text {
@@ -367,14 +362,17 @@ li.work-list-item.active {
 }
 
 .works-gallery-js {
-    display:                    flex;
+    display:                    grid;
+    grid-template-columns:      repeat(3, 30rem);
+    justify-content:            center;
     gap:                        1rem;
 }
 
 .work .gallery-img {
     width:                      100%;
+    max-width:                  29rem;
     height:                     100%;
-    max-height:                 21.2rem;
+    max-height:                 22rem;
 }
 
 /* //////////////////// work gallery hidden options //////////////////// */
@@ -463,11 +461,35 @@ li.work-list-item.active {
     background-position:        13% 49%;
     padding-left:               2%;
     transition-duration:        .5s;
+    position:                   relative;
 }
 
 .load-btn:hover {
     filter:                     brightness(110%);
     scale:                      1.05;
+}
+
+.loading {
+   width:                       24px;
+   height:                      24px;
+   border:                      2px solid white; 
+   border-radius:               50%;
+   border-right:                none;
+   border-top:                  none;
+   animation:                   load 1s linear infinite;
+   position:                    absolute;
+   top:                         35%;
+   left:                        10%;
+   visibility:                  hidden;
+}
+
+@keyframes load {
+    0% {
+    transform:                   rotate(0deg);
+    }
+    100% {
+    transform:                   rotate(360deg);    
+    }
 }
 
 /* //////////////////// news section //////////////////// */
@@ -584,7 +606,6 @@ li.work-list-item.active {
     left:                       0;
     transition:                 .5s;
 }
-
 
 .feedback-text {
     font-size:                  1.6rem;
