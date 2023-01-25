@@ -611,7 +611,7 @@ li.work-list-item.active {
     overflow:                   hidden;
 }
 
-.div-changer:hover .inactive {
+.move {
     left:                       0;
     transition:                 .5s;
 }

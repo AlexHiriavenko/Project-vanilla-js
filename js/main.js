@@ -50,12 +50,12 @@ workList.addEventListener("click", (evt) => {
     const galleryItems = document.querySelectorAll(".work .gallery-item");
     const worksGallery = document.querySelector(".works-gallery")
     let target = evt.target;
-    for (li of workList.children) {                             // начало - динамическая смена активной вкладки
+    for (let li of workList.children) {                             // начало - динамическая смена активной вкладки
         if (li.matches(".active")) li.classList.remove("active")
     }
     target.classList.add("active");                             // конец кода - динамическая смена активной вкладки
     let arr = [];                                               // начало опредение кол-ва li с дисплей блок 
-    for (li of galleryItems) {
+    for (let li of galleryItems) {
         li.dataset.typeWork !== target.dataset.typeWork ?
         li.style.display = "none": li.style.display = "block"   // фильтр изображений по категориям
         if (target.dataset.typeWork === "all") li.style.display = "block";  // конец кода фильтр изображений по категориям
@@ -76,7 +76,7 @@ workList.addEventListener("mouseover", (evt) => {
     const galleryImgs = document.querySelectorAll(".work .gallery-img")
     let target = evt.target;
     if (countDisplayBlock >= 12 && target.tagName === "LI" && target.dataset.typeWork !== "all") {
-        for (img of galleryImgs) {
+        for (let img of galleryImgs) {
             if (img.dataset.typeWork !== target.dataset.typeWork) 
             img.style.filter = "brightness(25%)";
         }
@@ -143,5 +143,29 @@ function loadImgs() {
     }, 2000);
 }
 
+const usersList = document.querySelector(".users-list");
+
+usersList.addEventListener("click", carousel) 
+
+function carousel(evt) {
+    if (evt.target.tagName === "IMG") {
+        let target = evt.target
+        const usersCards = document.querySelectorAll(".user-feedback");
+        let prevActive = document.querySelector(".feedback .user-img.active");
+        prevActive.classList.remove("active");
+        target.classList.add("active");
+        for (let userCard of usersCards) {
+            if (target.dataset.userId !== userCard.dataset.userId) {
+                userCard.classList.replace("active", "inactive");
+                userCard.classList.remove("move");
+            } else {
+                userCard.classList.replace("inactive", "active");
+                userCard.classList.add("move");
+            }
+        }
+        // usersCards.forEach(userCard => target.dataset.userId !== userCard.dataset.userId ?
+        //     userCard.classList.replace("active", "inactive") : userCard.classList.replace("inactive", "active"))
+    }
+}
 
 

@@ -289,7 +289,7 @@
             <h2 class="section-title">What People Say About the Ham</h2>
             <img class="quotes" src="./img/client-feedback/quotes.png" alt="quotes">
             <div class="div-changer">
-                <div class="user-feedback active">
+                <div class="user-feedback active" data-user-id="1">
                     <p class="feedback-text" lang="zxx">
                         Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar
                         odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi
@@ -299,7 +299,7 @@
                     <p class="user-speciality">UX Designer</p>
                     <img class="user-avatar" src="./img/client-feedback/hasan-ali.png" alt="user avatar" width="143" height="142">
                 </div>
-                <div class="user-feedback inactive">
+                <div class="user-feedback inactive" data-user-id="2">
                     <p class="feedback-text" lang="zxx">
                         Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi
                         pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
@@ -309,7 +309,7 @@
                     <p class="user-speciality">Nuclear Engineer</p>
                     <img class="user-avatar" src="./img/client-feedback/gomer.jpg" alt="user avatar" width="143" height="142">
                 </div>
-                <div class="user-feedback inactive">
+                <div class="user-feedback inactive" data-user-id="3">
                     <p class="feedback-text" lang="zxx">
                         Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi
                         pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
@@ -319,7 +319,7 @@
                     <p class="user-speciality">Scientific Researcher</p>
                     <img class="user-avatar" src="./img/client-feedback/Frink.webp" alt="user avatar" width="143" height="142">
                 </div>
-                <div class="user-feedback inactive">
+                <div class="user-feedback inactive" data-user-id="4">
                     <p class="feedback-text" lang="zxx">
                         Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi
                         pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa.
@@ -332,10 +332,22 @@
             <div class="users-carousel">
                 <button class="btn-carousel arrow-left"></button>
                 <ul class="users-list">
-                    <li class="users-list-item"><img class="user-img active" src="./img/client-feedback/hasan-ali.png" alt="user photo" width="60" height="60"></li>
-                    <li class="users-list-item"><img class="user-img" src="./img/client-feedback/gomer.jpg" alt="user photo" width="60" height="60"></li>
-                    <li class="users-list-item"><img class="user-img" src="./img/client-feedback/Frink.webp" alt="user photo" width="60" height="60"></li>
-                    <li class="users-list-item"><img class="user-img" src="./img/client-feedback/apu.png" alt="user photo" width="60" height="60"></li>
+                    <li class="users-list-item">
+                        <img class="user-img active" src="./img/client-feedback/hasan-ali.png" 
+                        alt="user photo" width="60" height="60" data-user-id="1">
+                    </li>
+                    <li class="users-list-item">
+                        <img class="user-img" src="./img/client-feedback/gomer.jpg" 
+                        alt="user photo" width="60" height="60" data-user-id="2">
+                    </li>
+                    <li class="users-list-item">
+                        <img class="user-img" src="./img/client-feedback/Frink.webp" 
+                        alt="user photo" width="60" height="60" data-user-id="3">
+                    </li>
+                    <li class="users-list-item">
+                        <img class="user-img" src="./img/client-feedback/apu.png" 
+                        alt="user photo" width="60" height="60" data-user-id="4">
+                    </li>
                 </ul>
                 <button class="btn-carousel arrow-right"></button>
             </div>
