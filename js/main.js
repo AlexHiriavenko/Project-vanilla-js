@@ -29,15 +29,11 @@ const servicesDescriptions = document.querySelectorAll(".services-description");
 
 servicesList.addEventListener("click", (evt) => {
     let target = evt.target;
-    if (target.tagName === "LI") {
-        let prevActive = document.querySelector(".services-list-item.active");
-        prevActive.classList.remove("active");
-        target.classList.add("active");
-        for (div of servicesDescriptions) {
-            div.dataset.service !== target.dataset.service ? 
-            div.classList.add("inactive") : div.classList.remove("inactive");
-        }
-    } 
+    let prevActive = document.querySelector(".services-list-item.active");
+    prevActive.classList.remove("active");
+    target.classList.add("active");
+    servicesDescriptions.forEach(div => div.dataset.service !== target.dataset.service ?
+        div.classList.add("inactive") : div.classList.remove("inactive"))
 })
 
 
@@ -48,31 +44,27 @@ let countDisplayBlock = 12;       // это переменная - счетчи�
 // то после фильтра я убираю эту подсветку т.к. не имеет смысла что то подсвечивать 
 // 2) для выравнивания grid repeat (4, fr) или (3, fr);
 
-// FILTER IMAGES VISIBILITY BY CLICK (ON SECTION WORKS)
+// FILTER IMAGES VISIBILITY BY CLICK ON APPROPRIATE LIST ITEM
 const workList = document.querySelector(".work-list");
 workList.addEventListener("click", (evt) => {
     const galleryItems = document.querySelectorAll(".work .gallery-item");
     const worksGallery = document.querySelector(".works-gallery")
     let target = evt.target;
-    if (target.tagName === "LI") {
-        for (li of workList.children) {                             // начало - динамическая смена активной вкладки                                 
-            if (li.matches(".active")) li.classList.remove("active")
-        }
-        target.classList.add("active");                             // конец кода - динамическая смена активной вкладки  
-        let arr = [];                                               // начало опредение кол-ва пунктов списка с дисплей блок  
-        for (li of galleryItems) {                                  // начало - фильтр изображений по категориям   
-            li.dataset.typeWork !== target.dataset.typeWork ?
-            li.style.display = "none": li.style.display = "block"
-            if (target.dataset.typeWork === "all") li.style.display = "block"  // конец кода фильтр изображений по категориям
-            arr.push(window.getComputedStyle(li).display);
-        }    
-        countDisplayBlock = arr.filter(display => display.includes("block")).length; // конец кода кол-во li с дисплей блок   
-    }                                                        
-    if (countDisplayBlock <= 3 || countDisplayBlock % 4 !== 0) {    // если см.условие 
-        worksGallery.classList.add("works-gallery-js");             // то меняем дисплей грид с (4, 1fr) на (3, 1fr), для более опимального отображения. 
-    } else {
-        worksGallery.classList.remove("works-gallery-js");          // и наоборот;
+    for (li of workList.children) {                             // начало - динамическая смена активной вкладки
+        if (li.matches(".active")) li.classList.remove("active")
     }
+    target.classList.add("active");                             // конец кода - динамическая смена активной вкладки
+    let arr = [];                                               // начало опредение кол-ва li с дисплей блок 
+    for (li of galleryItems) {
+        li.dataset.typeWork !== target.dataset.typeWork ?
+        li.style.display = "none": li.style.display = "block"   // фильтр изображений по категориям
+        if (target.dataset.typeWork === "all") li.style.display = "block";  // конец кода фильтр изображений по категориям
+        arr.push(window.getComputedStyle(li).display);
+    }    
+    countDisplayBlock = arr.filter(display => display.includes("block")).length; // конец кода кол-во li с дисплей блок
+    (countDisplayBlock <= 3 || countDisplayBlock % 4 !== 0) ?    // если см.условие
+    worksGallery.classList.add("works-gallery-js") :             // то меняем дисплей грид с (4, 1fr) на (3, 1fr), для более оптимального отображения.
+    worksGallery.classList.remove("works-gallery-js");           // и наоборот;
 })
 
 
@@ -92,9 +84,7 @@ workList.addEventListener("mouseover", (evt) => {
 })
 workList.addEventListener("mouseout", (evt) => {
     const galleryImgs = document.querySelectorAll(".work .gallery-img")
-    if (evt.target.tagName === "LI") {
-        galleryImgs.forEach(img => img.style.filter = "brightness(100%)")
-    }
+    galleryImgs.forEach(img => img.style.filter = "brightness(100%)")
 })
 
 
@@ -140,7 +130,7 @@ function loadImgs() {
                 worksGallery.append(li);
             }
         }
-        if (quantLi >= 24) {                                                     // если произошло 2 загрузки       
+        if (quantLi >= 24) {                                                     // если произошло 2 загрузки
             btnLoad.classList.replace("bg-btn-add", "bg-btn-min");               // изображение + на -   
             btnLoad.innerHTML = '<i class="loading"></i>MINIMIZE';               // текст кнопки меняем на "свернуть"
         }
