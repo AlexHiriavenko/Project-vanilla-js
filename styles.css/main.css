@@ -599,21 +599,22 @@ li.work-list-item.active {
 .feedback .div-changer {
     position:                   relative;
     overflow:                   hidden;
-    min-height:                 4.4rem;
-    border:                     1px solid red;
+    height:                     40.4rem;
 }
 
 .inactive {
     position:                   absolute;
     top:                        0%;
     left:                       100%;
-    max-height:                 4.4rem;
+    max-height:                 40.4rem;
+    min-width:                  114rem;
     overflow:                   hidden;
 }
 
 .move {
     left:                       0;
     transition:                 .5s;
+    max-width:                  114rem;
 }
 
 .feedback-text {

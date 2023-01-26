@@ -143,29 +143,76 @@ function loadImgs() {
     }, 2000);
 }
 
+
+
+// DISPLAY ELEMENT ON CLICK ON ICON
 const usersList = document.querySelector(".users-list");
+usersList.addEventListener("click", carouselIcon) 
 
-usersList.addEventListener("click", carousel) 
-
-function carousel(evt) {
+function carouselIcon(evt) {
     if (evt.target.tagName === "IMG") {
         let target = evt.target
         const usersCards = document.querySelectorAll(".user-feedback");
         let prevActive = document.querySelector(".feedback .user-img.active");
         prevActive.classList.remove("active");
         target.classList.add("active");
+        usersCards[0].classList.add("inactive");
         for (let userCard of usersCards) {
-            if (target.dataset.userId !== userCard.dataset.userId) {
-                userCard.classList.replace("active", "inactive");
-                userCard.classList.remove("move");
-            } else {
-                userCard.classList.replace("inactive", "active");
+            target.dataset.userId !== userCard.dataset.userId ?
+                userCard.classList.replace("move", "inactive"):
                 userCard.classList.add("move");
-            }
         }
-        // usersCards.forEach(userCard => target.dataset.userId !== userCard.dataset.userId ?
-        //     userCard.classList.replace("active", "inactive") : userCard.classList.replace("inactive", "active"))
     }
 }
 
+// DISPLAY ELEMENT ON CLICK ON BUTTON
 
+const btnL = document.querySelector(".feedback button.arrow-left");
+const btnR = document.querySelector(".feedback button.arrow-right");
+btnL.addEventListener("click", carouselBtnL);
+btnR.addEventListener("click", carouselBtnR);
+
+function carouselBtnL() {
+    const usersCards = document.querySelectorAll(".user-feedback");   // находим все дивы которые будут меняться    
+    const imgs = document.querySelectorAll(".feedback .user-img");    // находим все картинки - иконки малые внизу  
+    const prevActiveImg = document.querySelector(".feedback .user-img.active"); // находим активную img, кот была до клика
+    const prevActiveImgIndex = ([...imgs].indexOf(prevActiveImg));    //  находим её индекс
+    prevActiveImg.classList.remove("active");                         // удаляем класс эктив с img которая был до клика  
+    let newActiveImg;                                                 // новая активная img 
+    if (prevActiveImgIndex === 0) {                                   // если индекс img, кот была до клика = 0 
+        newActiveImg = imgs[imgs.length -1];                          // новая активная img это img c последним индексом  
+        imgs[imgs.length -1].classList.add("active");
+    }                                                                 // приваиваем ей класс эктив  
+    else {                                                            // иначе  
+        newActiveImg = imgs[prevActiveImgIndex - 1]                   // новая активная img это img c индексом предыдущей - 1  
+        imgs[prevActiveImgIndex - 1].classList.add("active")          // тогда присваиваем ей класс эктив 
+    }
+    usersCards[0].classList.add("inactive");
+    for (let userCard of usersCards) {                                // пробегаемся циклом по всем дивам  
+        newActiveImg.dataset.userId !== userCard.dataset.userId ?     // датасеты НЕ совпадают ?  
+            userCard.classList.replace("move", "inactive"):           // всем дивам оставаться не видимыми  
+            userCard.classList.add("move");                           // если совпадают - именно этот див будет видимым  
+    }
+}
+
+function carouselBtnR() {
+    const usersCards = document.querySelectorAll(".user-feedback");     
+    const imgs = document.querySelectorAll(".feedback .user-img");  
+    const prevActiveImg = document.querySelector(".feedback .user-img.active");
+    const prevActiveImgIndex = ([...imgs].indexOf(prevActiveImg));
+    prevActiveImg.classList.remove("active");
+    let newActiveImg;
+    if (prevActiveImgIndex === imgs.length -1) {
+        newActiveImg = imgs[0];
+        imgs[0].classList.add("active");
+    } else {
+        newActiveImg = imgs[prevActiveImgIndex + 1]
+        imgs[prevActiveImgIndex + 1].classList.add("active")
+    }
+    usersCards[0].classList.add("inactive");
+    for (let userCard of usersCards) {
+        newActiveImg.dataset.userId !== userCard.dataset.userId ?
+            userCard.classList.replace("move", "inactive"):
+            userCard.classList.add("move");
+    }
+}
