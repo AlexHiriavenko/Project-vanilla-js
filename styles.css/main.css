@@ -35,7 +35,7 @@ body {
 /* //////////////////// header nav //////////////////// */
 
 header {
-    background-image:           url("../img/img-base/sections-background/header.jpg");
+    background-image:           url("../img/header/header.jpg");
     margin-bottom:              .8rem;
     background-size:            100% 100%;
     background-position:        center center;
@@ -371,9 +371,7 @@ li.work-list-item.active {
 
 .work .gallery-img {
     width:                      100%;
-    max-width:                  29rem;
     height:                     100%;
-    max-height:                 22rem;
 }
 
 /* //////////////////// work gallery hidden options //////////////////// */
