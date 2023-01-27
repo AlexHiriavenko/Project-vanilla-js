@@ -2,12 +2,9 @@
 // ADD POP-UP TO WORK SECTION FOR EVERY TEG "LI";
 // чтобы не дублировать в разметке 12раз один и тот-же pop-up для каждого li  
 //перенес его в js, одна и та же разметка вставляется для каждого li.
-function addTegs() {
     const galleryItems = document.querySelectorAll(".work .gallery-item");
     const popUp = document.querySelector(".work .pop-up");
     [...galleryItems].slice(1).forEach(li => li.append(popUp.cloneNode(true)));
-}
-window.addEventListener("DOMContentLoaded", addTegs);
 
 
 
