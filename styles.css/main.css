@@ -8,9 +8,8 @@ body {
 }
 
 .container {
-    width:                      116rem;
+    max-width:                  116rem;
     margin:                     0 auto;
-    /* border:                     1px solid red; */
 }
 
 .section-title {
@@ -173,9 +172,9 @@ header .call-to-action {
     background-color:           #00CBF6;
 }
 
-.cta-btns:hover {
+.cta-btns:hover, .load-btn:hover {
     filter:                     brightness(110%);
-    scale:                      1.05;
+    transform:                  scale(1.05);
 }
 
 /* //////////////////// 4 benefits section //////////////////// */
@@ -325,6 +324,8 @@ header .call-to-action {
     background-color:           #E9EDEF;
 }
 
+/* //////////////////// work navigation //////////////////// */
+
 .work-list {
     margin:                     8.5rem 0 6.5rem;
     display:                    flex;
@@ -473,11 +474,6 @@ li.work-list-item.active {
     background-position:        13% 49%;
 }
 
-.load-btn:hover {
-    filter:                     brightness(110%);
-    scale:                      1.05;
-}
-
 .loading {
    width:                       24px;
    height:                      24px;
@@ -585,7 +581,7 @@ li.work-list-item.active {
 
 .feedback .quotes {
     display:                    block;
-    margin:                     10rem auto 3.7rem;
+    margin:                     9rem auto 3.5rem;
 }
 
 /* //////////////////// feedback div changer //////////////////// */
@@ -599,14 +595,14 @@ li.work-list-item.active {
 .feedback .div-changer {
     position:                   relative;
     overflow:                   hidden;
-    height:                     40.4rem;
+    height:                     39rem;
 }
 
 .inactive {
     position:                   absolute;
     top:                        0%;
     left:                       100%;
-    max-height:                 40.4rem;
+    max-height:                 39rem;
     min-width:                  114rem;
     overflow:                   hidden;
 }
@@ -622,6 +618,23 @@ li.work-list-item.active {
     font-weight:                300;
     line-height:                1.9;
     color:                      #BBBBBB;
+    max-height:                 8.6rem;
+    overflow-y:                 auto;
+    scrollbar-width:            thin;
+    scrollbar-color:            #18CFAB rgba(28, 104, 245, 0.2);
+}
+
+.feedback-text::-webkit-scrollbar {
+  width:                        10px;                              /* ширина всей полосы прокрутки */
+}
+
+.feedback-text::-webkit-scrollbar-track {
+  background:                   rgba(28, 104, 245, 0.2);         /* цвет зоны отслеживания */
+}
+
+.feedback-text::-webkit-scrollbar-thumb {
+  background-color:             #18CFAB;                         /* цвет бегунка */
+  border-radius:                20px;                              /* округлось бегунка */
 }
 
 .feedback .user-name {
@@ -642,8 +655,9 @@ li.work-list-item.active {
 
 .feedback .user-avatar {
     border-radius:              50%;
-    outline:                    12px solid rgba(31, 218, 181, 0.2) ;
+    outline:                    12px solid rgba(31, 218, 181, 0.2);
     margin-bottom:              5rem;
+    max-width:                  14.3rem;
 }
 
 /* //////////////////// feedback avatar carousel //////////////////// */
@@ -663,6 +677,7 @@ li.work-list-item.active {
 .feedback .user-img {
     border-radius:              50%;
     outline:                    5px solid rgba(31, 218, 181, 0.3);
+    cursor:                     pointer;
 }
 
 .users-list-item:hover .user-img {
@@ -672,11 +687,6 @@ li.work-list-item.active {
 .feedback .user-img.active {
     position:                   relative;
     outline:                    5px solid rgba(11, 229, 19, 0.4);
-    bottom:                     1rem;
-}
-
-.users-list-item.active {
-    position:                   relative;
     bottom:                     1rem;
 }
 
@@ -735,7 +745,7 @@ footer p {
     color:                      #AEAEAE
 }
 
-footer p span {
+footer p a {
     color:                      #18CFAB;
 }
 
@@ -744,7 +754,7 @@ footer p span {
     position:                   fixed;
     top:                        75%;
     left:                       95%;
-    opacity:                    0.3;
+    opacity:                    0.4;
 }
 
 .up > img {
