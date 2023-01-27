@@ -507,6 +507,7 @@ li.work-list-item.active {
     justify-content:            center;
     margin:                     10rem 0 7rem;
     gap:                        3rem;
+    overflow-x:                 hidden;
 }
 
 .news-list-item {
