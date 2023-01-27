@@ -186,22 +186,21 @@ header .call-to-action {
 }
 
 .benefits-list-item {
+    width:                      25%;
+    min-width:                  20rem;
+    padding:                    6rem 0 7rem;
+    font-weight:                700;
+    font-size:                  20px;
+    text-transform:             uppercase;
+    word-spacing:               .3rem;
     display:                    flex;
     flex-wrap:                  wrap;
     flex-direction:             column;
     justify-content:            space-between;
     align-items:                center;
-    padding:                    6rem 0 7rem;
-    min-height:                 26rem;
-    width:                      25%;
-    min-width:                  20rem;
     background-color:           #1C2A33;
     color:                      #18CFAB;
     box-sizing:                 border-box;
-    font-weight:                700;
-    font-size:                  20px;
-    text-transform:             uppercase;
-    word-spacing:               .3rem;
 }
 
 .benefits-list-item:nth-child(2n) {
