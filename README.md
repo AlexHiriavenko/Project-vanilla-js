@@ -1,4 +1,4 @@
-Вебсайт для продвижения - THE HAM IS WORDPRESS THEME;
+# Вебсайт для продвижения - THE HAM IS WORDPRESS THEME;
 
 url проекта:
 https://alexhiriavenko.github.io/project-vanilla-js/
